@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li::first-letter {
+            background-color: red;
+        }
+        .main::first-line{
+            background-color: aqua;
+        }
+        .main::selection{
+            background-color: black;
+            color: white;
+        }
+        ul li::before{
+            content: "H";
+            /* height: 500px; */
+        }
+        ul li::after{
+            content: "T";
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>One</li>
+        <li>One</li>
+        <li>One</li>
+        <li>One</li>
+        <li>One</li>
+        <li>One</li>
+    </ul>
+
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt. Rem totam quasi, atque similique quo
+        natus sequi nihil exercitationem incidunt officiis temporibus vel. Repudiandae at quod perspiciatis ullam
+        necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ex repellendus perspiciatis nisi
+        magnam veritatis. Dolor, ad repellat cupiditate repudiandae cumque perferendis id libero quaerat nihil fugit
+        odio totam amet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error similique odit dignissimos
+        dolorum optio veritatis explicabo natus maiores corporis. Accusantium vero atque ea eos animi possimus culpa
+        illum corrupti.
+    </div>
+</body>
+
+</html>
