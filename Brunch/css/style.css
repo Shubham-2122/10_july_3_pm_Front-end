@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* utilies */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header{
+    height: 500px;
+    background-image: url(/Images/header.png);
+}
+
+/* header start */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: lightcoral; */
+}
+
+.nav-ul .nav-li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-li .nav-a {
+    font-size: 25px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Open Sans";
+    text-align: right;
+    text-decoration: none;
+}
+.icon i {
+     font-size: 25px;
+     color: #000000;
+}
+
+
+/* header end */
