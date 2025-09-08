@@ -29,9 +29,11 @@
     display: inline-block;
     margin: 0 20px;
 }
-.icon .bar{
+
+.icon .bar {
     display: none;
 }
+
 .nav-li .nav-a {
     font-size: 25px;
     color: #000000;
@@ -55,7 +57,7 @@
 .header-content .header-h1 {
     width: 40%;
     /* 21 - 91 */
-    font-size: clamp(20px,7.8vw,92px);
+    font-size: clamp(20px, 7.8vw, 92px);
     letter-spacing: 1px;
     font-weight: 700;
 
@@ -64,7 +66,7 @@
 .header-content .header-p {
     width: 40%;
     /* 17 - 20 */
-    font-size: clamp(16px,2.3vw,21px);
+    font-size: clamp(16px, 2.3vw, 21px);
     letter-spacing: 0px;
     margin: 30px 0px;
     font-weight: 400;
@@ -78,14 +80,95 @@
 /* header end */
 
 /* sec1 start */
-#sec1{
-
+#sec1 {
+    padding: 40px 0px;
 }
-#sec1 .row{
+
+#sec1 .row {
     display: flex;
 }
-#sec1 .row .col{
+
+#sec1 .row .col {
     width: 33.33%;
-    border: 2px solid;
 }
+
+.card .card-img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.card-content {
+    font-family: "Open Sans";
+    text-align: center;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.card-content .card-h4 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.card-content .card-p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.card .card-i {
+    width: 90%;
+}
+
 /* sec1 end */
+
+/* meal start */
+.meal {
+    padding: 30px 0;
+}
+
+.meal .row {
+    display: flex;
+    
+}
+
+.meal .row .col-4 {
+    width: 40%;
+   
+}
+
+.meal .row .col-6 {
+    width: 60%;
+    background: url("/Images/data.png");
+    background-size: 100% 100%;
+}
+.meal-content{
+    padding: 40px;
+}
+
+.meal-img {
+    width: 80%;
+}
+
+.meal-content .meal-h1 {
+    font-size: 75px;
+    width: 80%;
+    letter-spacing: 1px;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.meal-content .meal-p {
+    width: 75%;
+    font-size: 21px;
+    letter-spacing: 0px;
+    padding: 30px 0;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+.meal-content .meal-a{
+    color: black;
+    font-size: 21px;
+}
+
+/* meal end */

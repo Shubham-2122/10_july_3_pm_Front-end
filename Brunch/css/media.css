@@ -20,6 +20,13 @@
     .header-content .header-p{
         width: 70%;
     }
+    #sec1 .row {
+        flex-direction: column;
+    }
+    #sec1 .row .col {
+        width: 90%;
+        margin: 0 auto;
+    }
 
 }
 @media only screen and (max-width:576px) {
