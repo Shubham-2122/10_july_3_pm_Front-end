@@ -127,12 +127,12 @@
 
 .meal .row {
     display: flex;
-    
+
 }
 
 .meal .row .col-4 {
     width: 40%;
-   
+
 }
 
 .meal .row .col-6 {
@@ -140,7 +140,8 @@
     background: url("/Images/data.png");
     background-size: 100% 100%;
 }
-.meal-content{
+
+.meal-content {
     padding: 40px;
 }
 
@@ -150,6 +151,7 @@
 
 .meal-content .meal-h1 {
     font-size: 75px;
+    font-size: clamp(20px, 7.8vw, 74px);
     width: 80%;
     letter-spacing: 1px;
     color: #000000;
@@ -166,9 +168,53 @@
     font-weight: 400;
     font-family: "Open Sans";
 }
-.meal-content .meal-a{
+
+.meal-content .meal-a {
     color: black;
     font-size: 21px;
+}
+
+#foot {
+    padding: 30px 0px;
+    background-color: rgb(254, 128, 74);
+}
+
+#foot .row {
+    display: flex;
+}
+
+#foot .row .col {
+    width: 16.65%;
+}
+
+.foot-img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.foot-h5 {
+    font-size: 17px;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.foot-ul{
+    list-style: none;
+}
+.foot-ul .foot-li{
+    margin: 10px 0px;
+}
+.foot-ul .foot-li .foot-a{
+   
+font-size: 17px;
+color: #000000;
+font-weight: 300;
+font-family: "Open Sans";
+text-decoration: none;
+}
+.foot-logo{
+    width: 40px;
 }
 
 /* meal end */
