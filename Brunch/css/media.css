@@ -1,6 +1,8 @@
 @media only screen and (max-width:1160px) {}
 
-@media only screen and (max-width:992px) {}
+@media only screen and (max-width:992px) {
+
+}
 
 @media only screen and (max-width:768px) {
     .nav-ul {
@@ -65,6 +67,32 @@
     #foot .row .col {
         width: 50%;
         margin: 20px auto;
+    }
+
+    #sec4 .row {
+        display: block;
+
+    }
+
+    #sec4 .row .col {
+        width: 90%;
+        margin: 20px auto;
+    }
+    #sec4 .store-p{
+        width: 90%;
+    }
+
+    #menu .menu-down .row {
+        display: block;
+    }
+
+    #menu .menu-down .col-5 {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .menu-up .menu-up-p {
+        width: 100%;
     }
 }
 
