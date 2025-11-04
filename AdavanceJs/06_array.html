@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- array :- collection of mutiple store in single array . [] ,start index = 0  -->
+
+    <script>
+
+        let arr = [1,2,3,4,5,"hello","java",7,8,9]
+        console.log(arr)
+
+        // value[index]
+        console.log(arr[5])
+
+        // 1) loop simple for
+        // for(let i=0;i<arr.length;i++){
+        //     // console.log(i)
+        //     console.log(arr[i])
+        // }
+
+        // Es7
+        // 2) for of value
+        // for(let val of arr){
+        //     console.log(val)
+        // }
+
+        // 3) for in 
+        // for(let data in arr){
+        //     // console.log(data)
+        //     console.log(arr[data])
+        // }
+
+        // 4) for Each 
+
+        // value ,index
+        arr.forEach((val,index)=>{
+            // console.log(index)
+            // console.log(val)
+            console.log("inde : ",index," = value :",val)
+        })
+
+        let arr1 = [1,2,3,4,5,[6,7,8,[9,10]]]
+
+        console.log(arr1[5][1])
+        console.log(arr1[5][3][1])
+
+
+
+    </script>
+
+
+</body>
+</html>
