@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Arith{
+            // function with store and without para
+            x = function sum(){
+                let a = 20,b=10
+                console.log("sum =>",a+b)
+            }
+
+            // function with store and with para
+            y = function sub(a,b){
+                console.log("Sub => ",a-b)
+            }
+
+            // function without store wihout para
+            mul(){
+                let x = 30,y=10
+                console.log("mul => ",x*y)
+            }
+
+            // function without store wih para
+            divi(a,b){
+                console.log("divi => ",a/b)
+            }
+        }
+
+        const data = new Arith;
+        console.log(data)
+        
+        data.x()
+        data.mul()
+        data.divi(50,20)
+        data.y(50,20)
+
+    </script>
+</body>
+</html>

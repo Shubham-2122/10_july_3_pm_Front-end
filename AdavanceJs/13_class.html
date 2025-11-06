@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- class :- collection of multiple data member(varibale) and member function(function).
+    class :- it's blue print of object 
+
+    class Class-name{
+        memebr fucntion 
+        name(){
+
+            varibale 
+        }
+    }
+
+    let data = new Class-name -->
+
+
+    <script>
+
+        class Bank{
+            // memeber function
+            x = function Details(pin,blance){
+                // data member
+                let bankName = "HDFC"
+                let bankIfsc = "HDFC0001H"
+                let pinnum = pin 
+                let bankblance = blance     
+                
+                console.log("bank Name :",bankName)
+                console.log("Bank IFSC : ",bankIfsc)
+                console.log("bank pin :",pinnum)
+                console.log("Bank blance :",bankblance)
+            }
+            y = function Deposit(){
+                console.log("Deposit data")
+            }
+        }
+
+        // console.log(Bank)
+        const het = new Bank;
+        console.log(het)
+        het.x(123,4000)
+        het.y()
+
+        const harsh = new Bank
+        console.log(harsh)
+        harsh.y()
+
+    </script>
+
+
+</body>
+</html>
