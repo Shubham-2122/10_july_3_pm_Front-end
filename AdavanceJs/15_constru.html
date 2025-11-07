@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- constru :- coman logic js one time object automatically  -->
+     <!-- A class may only have one constructor -->
+
+    <script>
+
+        class Xy {
+            constructor() {
+                console.log("method Call constr")
+            }
+            x = function data() {
+                console.log("Data function")
+            }
+            data1() {
+                console.log("Data 1 function")
+            }
+            // constructor(){
+            //     console.log("Data 1 cons")
+            // }
+        }
+
+        // console.log(Xy)
+        const user = new Xy
+        console.log(user)
+        user.data1()
+
+    </script>
+
+</body>
+
+</html>
