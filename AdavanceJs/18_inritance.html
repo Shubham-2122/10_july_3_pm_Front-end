@@ -7,12 +7,41 @@
 </head>
 <body>
     <!-- inheritance :- one class to another property send  -->
+<!-- 
+    1) single A - B 
+    2) multi-level A - B - C 
+    3) multiple :- A - B , C - B not use javascript
+    4) hirachical :- A - B , A - C
+    5) hybird :- any two inritcance combine -->
 
-    1) single 
-    2) multi-level
-    3) multiple 
-    4) hirachical
-    5_ hybird 
+    <!-- extends keyword -->
+
+
+    <script>
+
+        // class a to b 
+
+        class A {
+            data(){
+                console.log("A Class Data...!")
+            }
+        }
+
+        class B extends A {
+            data1(){
+                console.log("B Class Data1..")
+            }
+        }
+
+        const user = new B  
+        console.log(user)
+
+        user.data1()
+        user.data()
+
+
+    </script>
     
+
 </body>
 </html>
