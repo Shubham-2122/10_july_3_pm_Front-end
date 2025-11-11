@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- promise :- one type object/class -->
+     <!-- Res ,error -->
+
+     <!-- 3 state 
+     
+     1) pending :- state hold data
+     2) fullfield :- Completed data show , api show
+     3) rejected :- network,syntax , state rejected
+
+    synatx :- 
+    let data = new Promise(function(res,error){
+        ...code
+    })
+
+     -->
+
+     <script>
+
+        let data = new Promise(function(res,rej){
+            let num = 10
+            if(num == 11){
+                res("resolve value")
+            }
+            else{
+                rej("rejected value")
+            }
+        })
+
+        console.log(data)
+     </script>
+
+</body>
+</html>
