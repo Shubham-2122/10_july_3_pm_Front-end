@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fetch :- it back-end data read format it's a promise -->
+    <!--
+        fetch("baseurl",{
+            method:"GET"
+        })
+        .then((res)=>{
+            convert code string/array
+        })
+        .then((data){
+            print a data
+        })
+    -->
+
+    <button onclick="test()">add data</button>
+
+    <h1 id="h1"></h1>
+
+    <script>
+        // console.log(fetch())
+
+       function test(){
+         fetch("data.txt",{
+            method:"GET"
+        })
+        .then((res)=>{
+            // text data string 
+            // console.log(res)
+            return res.text()
+            // console.log(res.text())
+        })
+        .then((data)=>{
+            console.log(data)
+            // document.writeln(data)
+            document.getElementById("h1").innerHTML = data
+        })
+       }
+
+    </script>
+
+</body>
+</html>
