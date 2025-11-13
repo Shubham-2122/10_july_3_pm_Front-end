@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- json :- javascript object notation (string) -->
+
+    <!-- Read  -->
+    <!-- light wight open source -->
+    <!-- json direct not read method  -->
+
+
+    <!-- let json = `[
+    {
+        "id":"1",
+        "name":"Riya",
+        "Course":"React"
+    }
+    ]`
+
+    let object = [
+    {
+        id:1,
+        name :"Riya",
+        course : "React"
+    }
+    ] -->
+
+
+    <script>
+        let jsondata = `[
+            {
+                "id":1,
+                "name":"Riya",
+                "course" :"react"
+            },
+            {
+                "id":2,
+                "name":"het",
+                "course" :"back-end"
+            },
+            {
+                "id":3,
+                "name":"harsh",
+                "course" :"front-end"
+            }
+        ]`
+
+        // console.log(jsondata)
+        // document.writeln(jsondata)
+
+        // json string -> object/array
+        let data = JSON.parse(jsondata)
+        console.log(data)
+        for(let val of data){
+            console.log(val)
+            document.write(`<h2>id : ${val.id} name : ${val.name} course : ${val.cours}</h2>`)
+        }
+
+        let ob = [
+            {
+                id:1,
+                name : "jiger",
+                age : 42
+            },
+            {
+                id:2,
+                name : "priya",
+                age : 30
+            },
+            {
+                id:3,
+                name : "gaurve sir",
+                age : 32
+            }
+        ]
+
+        console.log(ob)
+
+        // method strigfy
+        let json = JSON.stringify(ob)
+        console.log(json)
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        fetch("data.json",{
+            method:"GET"
+        })
+        .then((res)=>{
+            // json -> object//array
+            return res.json()
+        })
+        .then((res)=>{
+            console.log(res)
+
+            res.forEach((data,index) => {
+                console.log(data)
+                document.write(`<h3>id : ${data.id} name : ${data.name} course : ${data.course}</h3>`)
+            });
+        })
+        .catch((error)=>{
+            console.log("Api data not",error)
+        })
+
+    </script>
+</body>
+</html>
