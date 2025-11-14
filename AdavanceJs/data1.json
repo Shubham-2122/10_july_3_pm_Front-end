@@ -1,41 +1,41 @@
 {
-    "admin":[
+    "admin": [
         {
-            "id":1,
-            "name":"admin",
-            "email":"admin@gmail.com"
+            "id": 1,
+            "name": "admin",
+            "email": "admin@gmail.com"
         },
         {
-            "id":2,
-            "name":"subadmin",
-            "email":"subadmin@gmail.com"
+            "id": 2,
+            "name": "subadmin",
+            "email": "subadmin@gmail.com"
         },
-         {
-            "id":3,
-            "name":"superadmin",
-            "email":"superadmin@gmail.com"
+        {
+            "id": 3,
+            "name": "superadmin",
+            "email": "superadmin@gmail.com"
         }
     ],
-    "users":[
+    "users": [
         {
-        "id":1,
-        "name":"keyur",
-        "course":"Front-end"
-    },
-    {
-        "id":2,
-        "name":"parth",
-        "course":"back-end"
-    },
-    {
-        "id":3,
-        "name":"monika",
-        "course":"full-stack"
-    },
-    {
-        "id":4,
-        "name":"varj",
-        "course":"Mern-stack"
-    }
+            "id": 1,
+            "name": "keyur",
+            "course": "Front-end"
+        },
+        {
+            "id": 2,
+            "name": "parth",
+            "course": "back-end"
+        },
+        {
+            "id": 3,
+            "name": "monika",
+            "course": "full-stack"
+        },
+        {
+            "id": 4,
+            "name": "varj",
+            "course": "Mern-stack"
+        }
     ]
 }

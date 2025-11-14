@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="5"> 
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Compnay name</th>
+            </tr>
+        </thead>
+        <tbody class="ab">
+
+        </tbody>
+    </table>
+
+
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users",{
+            method:"GET"
+        })
+        .then((res)=>{
+            return res.json()
+        })
+        .then((res)=>{
+            console.log(res)
+
+            res.forEach((data,index) => {
+               console.log(data) 
+
+                let tbody = document.querySelector(".ab")
+
+                let trow = tbody.insertRow()
+                let idcell = trow.insertCell(0)
+                let namecell = trow.insertCell(1) 
+                let emailcell =  trow.insertCell(2)
+                let citycell =  trow.insertCell(3)
+                let companycell =trow.insertCell(4)
+
+                idcell.textContent = data.id
+                namecell.textContent = data.name
+                emailcell.textContent = data.email
+                citycell.textContent = data.address.city
+                companycell.textContent = data.company.name
+            });
+        })
+    </script>
+</body>
+</html>
