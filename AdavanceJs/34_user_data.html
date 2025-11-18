@@ -8,25 +8,27 @@
 <body>
     <script>
 
-        fetch("data.json",{
-            method:"GET"
-        })
-        .then((res)=>{
-            // json -> object//array
-            return res.json()
-        })
-        .then((res)=>{
-            console.log(res)
+        function test() {
+                fetch("data.json", {
+                    method: "GET"
+                })
+                    .then((res) => {
+                        // json -> object//array
+                        return res.json()
+                    })
+                    .then((res) => {
+                        console.log(res)
 
-            res.forEach((data,index) => {
-                console.log(data)
-                document.write(`<h3>id : ${data.id} name : ${data.name} course : ${data.course}</h3>`)
-            });
-        })
-        .catch((error)=>{
-            console.log("Api data not",error)
-        })
+                        res.forEach((data, index) => {
+                            console.log(data)
+                            document.write(`<h3>id : ${data.id} name : ${data.name} course : ${data.course}</h3>`)
+                        });
+                    })
+                    .catch((error) => {
+                        console.log("Api data not", error)
+                    })
 
+        }
     </script>
 </body>
 </html>
