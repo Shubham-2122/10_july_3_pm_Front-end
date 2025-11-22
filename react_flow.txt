@@ -1,0 +1,58 @@
+Javascript 
+
+React(facebook) , agul(google) , vue(google) ,next:
+
+React :- javascript lib
+	:- single page fatser 
+	:- component :- Header,foot
+	:- Fast do not refresh page
+	:- vitrual dom :- real Dom copy
+
+React :- global web client server
+	: index.html
+
+React folder stru
+	
+need :- node.js :- javascript runtime enviroment
+
+	React page browser same output
+	First node js
+
+1) node install
+	cmd : node -v
+	v22.11.0
+
+2) npm :- node package manager 
+	local : fucntion
+	global :- node inbuit
+	3rd party : bootstrap
+
+3) npm(global) vs npx(external) 
+
+4) C drive : desktop E
+
+5) react application : slow
+	cmd : npx create-react-app app-name
+	cmd : cd app-name
+	cmd : npm start
+
+6) vite + react install
+	cmd : npm create vite@latest app-name
+	cmd : cd app-name
+	cmd : npm run dev
+
+
+folder struc
+	1) node module : script : npm install
+	2) public : index.html , static img assest
+	3) src : index.js,App.js
+	4) package-lock.json , package.json
+
+	html -> js 
+	js -> html
+
+flder vite+react
+	3) src : main.jsx,App.jsx
+
+
+

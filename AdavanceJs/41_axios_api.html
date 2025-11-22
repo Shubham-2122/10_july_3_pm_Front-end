@@ -19,7 +19,42 @@
                 document.writeln(`<h3>id : ${data.id}</h3>`)
             }
         }
-        fetdata()
+        // fetdata()
+
+        // post new data 
+        let person = {
+            name : "keyur",
+            password:"12345",
+            email : "keyur@gmail.com"
+        }
+
+        const Createuser=async()=>{
+            const res = await axios.post("https://660d95e36ddfa2943b34c530.mockapi.io/admins",person)
+            console.log(res.data)
+        }
+        // Createuser()
+
+        const deleteuser=async()=>{
+            const res =  await axios.delete("https://660d95e36ddfa2943b34c530.mockapi.io/admins/7")
+            console.log(res.data)
+        }
+        // deleteuser()
+
+
+        let perosn1 = {
+            id:"6",
+            name :"prath",
+            password:"34221",
+            city:"rajkot"
+        }
+
+        const updateuser = async()=>{
+            const res = await axios.put(`https://660d95e36ddfa2943b34c530.mockapi.io/admins/${perosn1.id}`,perosn1)
+            console.log(res.data)
+        }
+
+        updateuser()
+
 
     </script>
 </body>
