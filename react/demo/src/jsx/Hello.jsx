@@ -23,12 +23,11 @@ function Hello() {
    </ol>
 
 
-
   return (
     <>
       <h1>Hello this jsx compo</h1>
     
-        <h2>hello name : {data}</h2>
+        <h2 className=''>hello name : {data}</h2>
 
         <h1>Hello name : {person.name}</h1>
 
