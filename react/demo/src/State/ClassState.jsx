@@ -5,6 +5,7 @@
 // state : object only use not use,single,array
 
 import React, { Component } from 'react'
+import Imge from './Imge';
 
 class ClassState extends Component {
 
@@ -28,11 +29,22 @@ class ClassState extends Component {
 
         <h1>Hello count : {this.state.count}</h1>
 
-        
         <button onClick={()=>this.setState({count : this.state.count + 1})}>Increment</button>
         <button onClick={()=>this.setState({count : this.state.count - 1})}>Decrement</button>
 
         <button onClick={()=>this.setState({count :  0})}>Zero</button>
+
+        <br /> <br />
+
+        <button onClick={()=>this.setState({isImage : false})}>Hide</button>
+         <button onClick={()=>this.setState({isImage : true})}>Show</button>
+
+         <button onClick={()=>this.setState({isImage : !this.state.isImage})}>Toggle</button>
+
+        {
+          (this.state.isImage)?<Imge /> : false
+        }
+
       </div>
     )
   }
