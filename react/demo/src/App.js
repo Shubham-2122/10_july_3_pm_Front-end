@@ -4,7 +4,9 @@ import React from "react";
 // import Hello from "./jsx/Hello";
 // import Style from "./style/Style";
 // import MainProps from "./Props/MainProps";
-import MainState from "./State/MainState";
+// import MainState from "./State/MainState";
+import FormData from "./FormHaldling/FormData";
+import FormObj from "./FormHaldling/FormObj";
 
 function App() {
     return (
@@ -25,7 +27,11 @@ function App() {
             {/* <MainProps /> */}
 
             {/* state */}
-            <MainState />
+            {/* <MainState /> */}
+
+        {/* hadling form */}
+            {/* <FormData /> */}
+            <FormObj />
         </div>
     )
 }
