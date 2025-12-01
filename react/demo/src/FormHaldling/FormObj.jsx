@@ -33,7 +33,7 @@ function FormObj() {
 
 
              <form action="">
-                <input type="text" value={form.name} name='name1' onChange={getchange} placeholder='Enter your name' /> <br />
+                <input type="text" value={form.name} name='name' onChange={getchange} placeholder='Enter your name' /> <br />
                 <input type="text" value={form.surname} name='surname' onChange={getchange}  placeholder='Enter your surname' /> <br />
                 <input type="tel" value={form.phone} name='phone' onChange={getchange}  placeholder='Enter your Phone' /> <br />
                 <input type="email" value={form.email} name='email' onChange={getchange}  placeholder='Enter your email' /> <br />

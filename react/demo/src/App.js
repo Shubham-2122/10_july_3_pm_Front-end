@@ -1,12 +1,14 @@
 import React from "react";
+import Effect from "./Effect/Effect";
+import UserData from "./Effect/UserData";
 // import ClassCompo from "./Component/ClassCompo";
 // import FuncCompo from "./Component/FuncCompo";
 // import Hello from "./jsx/Hello";
 // import Style from "./style/Style";
 // import MainProps from "./Props/MainProps";
 // import MainState from "./State/MainState";
-import FormData from "./FormHaldling/FormData";
-import FormObj from "./FormHaldling/FormObj";
+// import FormData from "./FormHaldling/FormData";
+// import FormObj from "./FormHaldling/FormObj";
 
 function App() {
     return (
@@ -29,9 +31,14 @@ function App() {
             {/* state */}
             {/* <MainState /> */}
 
-        {/* hadling form */}
+            {/* hadling form */}
             {/* <FormData /> */}
-            <FormObj />
+            {/* <FormObj /> */}
+
+            {/* UseEffect */}
+            {/* <Effect /> */}
+            <UserData />
+
         </div>
     )
 }
