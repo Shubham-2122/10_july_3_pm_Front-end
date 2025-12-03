@@ -39,7 +39,7 @@ function UserData() {
                         <th scope="col">address</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody>      
                     {
                         user && user.map((data, index) => {
                             // console.log(data)

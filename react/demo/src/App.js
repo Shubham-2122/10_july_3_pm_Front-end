@@ -1,6 +1,8 @@
 import React from "react";
-import Effect from "./Effect/Effect";
-import UserData from "./Effect/UserData";
+// import Effect from "./Effect/Effect";
+// import UserData from "./Effect/UserData";
+import Userac from "./Effect/Userac";
+import Product from "./Effect/Product";
 // import ClassCompo from "./Component/ClassCompo";
 // import FuncCompo from "./Component/FuncCompo";
 // import Hello from "./jsx/Hello";
@@ -37,7 +39,10 @@ function App() {
 
             {/* UseEffect */}
             {/* <Effect /> */}
-            <UserData />
+            {/* <UserData /> */}
+            {/* <Userac /> */}
+
+            <Product />
 
         </div>
     )
