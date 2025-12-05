@@ -18,6 +18,7 @@ function ChaildA() {
         {/* provide context */}
         {/* use context */}
         <h1>Hello A Component</h1>
+        <h1>Name : {name}</h1>
 
         <Data.Provider value={{name,setname,form,setform}}>
             <ChaildB />

@@ -1,9 +1,12 @@
 import React from "react";
+import Boots from "./Boots/Boots";
+import ReactBoot from "./Boots/ReactBoot";
+import Footer from "./Boots/Footer";
 // import Effect from "./Effect/Effect";
 // import UserData from "./Effect/UserData";
 // import Userac from "./Effect/Userac";
 // import Product from "./Effect/Product";
-import MainData from "./Context/MainData";
+// import MainData from "./Context/MainData";
 // import ClassCompo from "./Component/ClassCompo";
 // import FuncCompo from "./Component/FuncCompo";
 // import Hello from "./jsx/Hello";
@@ -45,7 +48,11 @@ function App() {
 
             {/* <Product /> */}
 
-            <MainData />
+            {/* <MainData /> */}
+
+            {/* <Boots /> */}
+            {/* <ReactBoot /> */}
+            <Footer />
 
         </div>
     )
