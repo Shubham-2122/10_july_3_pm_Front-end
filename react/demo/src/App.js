@@ -2,6 +2,11 @@ import React from "react";
 import Boots from "./Boots/Boots";
 import ReactBoot from "./Boots/ReactBoot";
 import Footer from "./Boots/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Layout/Pages/Home";
+import About from "./Layout/Pages/About";
+import Contact from "./Layout/Pages/Contact";
+import NotFound from "./Layout/Pages/NotFound";
 // import Effect from "./Effect/Effect";
 // import UserData from "./Effect/UserData";
 // import Userac from "./Effect/Userac";
@@ -18,6 +23,7 @@ import Footer from "./Boots/Footer";
 
 function App() {
     return (
+        <BrowserRouter>
         <div>
 
             {/* component */}
@@ -52,9 +58,18 @@ function App() {
 
             {/* <Boots /> */}
             {/* <ReactBoot /> */}
-            <Footer />
+            {/* <Footer /> */}
+            
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+
+                <Route path="*" element={<NotFound />} />
+            </Routes>
 
         </div>
+        </BrowserRouter>
     )
 }
 
