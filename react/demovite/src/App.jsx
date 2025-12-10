@@ -2,6 +2,9 @@ import React from 'react'
 import Hello from './Hello'
 import Font from './Component/Font'
 import Space from './Component/Space'
+import Border from './Component/Border'
+import Data from './Component/Data'
+import Flex from './Component/Flex'
 
 function App() {
   return (
@@ -9,9 +12,12 @@ function App() {
       {/* <h1>Hello this App + vite</h1> */}
       {/* <Hello /> */}
 
-    {/* <Font /> */}
-    <Space />
+      {/* <Font /> */}
+      {/* <Space /> */}
 
+      {/* <Border /> */}
+      {/* <Data /> */}
+      <Flex />
     </div>
   )
 }
