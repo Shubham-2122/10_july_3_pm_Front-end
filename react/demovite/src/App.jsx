@@ -5,6 +5,7 @@ import Space from './Component/Space'
 import Border from './Component/Border'
 import Data from './Component/Data'
 import Flex from './Component/Flex'
+import Media from './Component/Media'
 
 function App() {
   return (
@@ -17,7 +18,10 @@ function App() {
 
       {/* <Border /> */}
       {/* <Data /> */}
-      <Flex />
+      {/* <Flex /> */}
+
+  = <Media />
+
     </div>
   )
 }

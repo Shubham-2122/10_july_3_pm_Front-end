@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+/* tag apply */
+@layer base{
+    h1{
+        font-size: 50px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+@layer components{
+    .card{
+        height: 300px;
+        width: 200px;
+        border: 2px solid;
+        box-shadow: 0 0 10px 20px gray;
+    }
+    .card:hover{
+        background-color: lightcoral;
+    }
+
+    .btn{
+        height: 50px;
+        width: 200px;
+        background: linear-gradient(red,green);
+        padding: 10px 20px;
+        border: 5px solid ;
+        border-radius: 20px;
+    }
+}
+
+@layer utilities{
+    .pad{
+        padding: 50px;
+    }
+    .font{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .font1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
