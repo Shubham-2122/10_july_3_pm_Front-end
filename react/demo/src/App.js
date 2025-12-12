@@ -10,6 +10,8 @@ import NotFound from "./Layout/Pages/NotFound";
 import About1 from "./Layout/Pages/About1";
 import About2 from "./Layout/Pages/About2";
 import LifeCycle from "./LifeCycle";
+import Refdata from "./Hooks/Refdata";
+import HelloReducer from "./Hooks/HelloReducer";
 // import Effect from "./Effect/Effect";
 // import UserData from "./Effect/UserData";
 // import Userac from "./Effect/Userac";
@@ -71,6 +73,8 @@ function App() {
                 </Route>
                 <Route path="/contact" element={<Contact />} />
                  <Route path="/life" element={<LifeCycle />} />
+                 <Route path="/ref" element={<Refdata />} />
+                   <Route path="/red" element={<HelloReducer />} />
 
                 <Route path="*" element={<NotFound />} />
             </Routes>
