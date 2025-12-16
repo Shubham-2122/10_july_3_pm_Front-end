@@ -1,0 +1,47 @@
+import React, { useEffect } from 'react'
+import Home from './website/Pages/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './website/Pages/About';
+import Not from './website/Pages/Not';
+import Amenities from './website/Pages/Amenities';
+import Book from './website/Pages/Book';
+import Contact from './website/Pages/Contact';
+import Location from './website/Pages/Location';
+import Offers from './website/Pages/Offers';
+import Room from './website/Pages/Room';
+import Restaurant from './website/Pages/Restaurant';
+// import '/b/ootstrap/dist/css/bootstrap.min.css'
+// import './assets/css/main.css'
+
+function App() {
+
+  useEffect(() => {
+    if (window.AOS) {
+      window.AOS.init();
+    }
+  }, []);
+
+
+  return (
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/ame' element={<Amenities />} />
+          <Route path='/book' element={<Book />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/location' element={<Location />} />
+          <Route path='/offer' element={<Offers />} />
+          <Route path='/room' element={<Room />} />
+          <Route path='/rest' element={<Restaurant />} />
+
+
+          <Route path='*' element={<Not />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
+}
+
+export default App
