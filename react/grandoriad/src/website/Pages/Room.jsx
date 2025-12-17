@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../coman/Header'
 import Footer from '../coman/Footer'
+import axios from 'axios'
 
 function Room() {
+
+    const [rooms,setrooms] = useState([])
+
+    const fetchdata =async()=>{
+        const res = await axios.get("http://localhost:3000/rooms")
+        console.log(res.data)
+        setrooms(res.data)
+    }
+
+    useEffect(()=>{
+        fetchdata()
+    },[])
+
     return (
         <div>
             <Header />
@@ -64,18 +78,21 @@ function Room() {
                         </div>
                         <div className="rooms-grid" data-aos="fade-up" data-aos-delay={300}>
                             <div className="row g-4">
-                                <div className="col-xl-4 col-lg-6">
+                               {
+                                rooms && rooms.map((data,index)=>{
+                                    return(
+                                         <div className="col-xl-4 col-lg-6">
                                     <div className="room-card">
                                         <div className="room-image">
-                                            <img src="assets/img/hotel/room-1.webp" alt="Deluxe Ocean Suite" className="img-fluid" />
+                                            <img src={data.img} alt="Deluxe Ocean Suite" className="img-fluid" />
                                             <div className="room-features">
-                                                <span className="feature-badge ocean">Ocean View</span>
-                                                <span className="feature-badge popular">Popular</span>
+                                                <span className="feature-badge ocean">{data.type}</span>
+                                            
                                             </div>
                                         </div>
                                         <div className="room-content">
                                             <div className="room-header">
-                                                <h3>Deluxe Ocean Suite</h3>
+                                                <h3>{data.name}</h3>
                                                 <div className="room-rating">
                                                     <i className="bi bi-star-fill" />
                                                     <i className="bi bi-star-fill" />
@@ -84,206 +101,27 @@ function Room() {
                                                     <i className="bi bi-star-fill" />
                                                 </div>
                                             </div>
-                                            <p className="room-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p className="room-description">it. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             <div className="room-amenities">
-                                                <span><i className="bi bi-people" /> Up to 4 guests</span>
+                                                <span><i className="bi bi-people" /> Up to {data.guests} guests</span>
                                                 <span><i className="bi bi-wifi" /> Free WiFi</span>
                                                 <span><i className="bi bi-tv" /> Smart TV</span>
                                             </div>
                                             <div className="room-footer">
                                                 <div className="room-price">
                                                     <span className="price-from">From</span>
-                                                    <span className="price-amount">$289</span>
+                                                    <span className="price-amount">${data.price}</span>
                                                     <span className="price-period">/ night</span>
                                                 </div>
                                                 <a href="room-details.html" className="btn-room-details">View Details</a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>{/* End Room Card */}
-                                <div className="col-xl-4 col-lg-6">
-                                    <div className="room-card">
-                                        <div className="room-image">
-                                            <img src="assets/img/hotel/room-3.webp" alt="Executive Business Suite" className="img-fluid" />
-                                            <div className="room-features">
-                                                <span className="feature-badge business">Business</span>
-                                            </div>
-                                        </div>
-                                        <div className="room-content">
-                                            <div className="room-header">
-                                                <h3>Executive Business Suite</h3>
-                                                <div className="room-rating">
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-half" />
-                                                </div>
-                                            </div>
-                                            <p className="room-description">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                            <div className="room-amenities">
-                                                <span><i className="bi bi-people" /> Up to 2 guests</span>
-                                                <span><i className="bi bi-laptop" /> Work Desk</span>
-                                                <span><i className="bi bi-telephone" /> Business Phone</span>
-                                            </div>
-                                            <div className="room-footer">
-                                                <div className="room-price">
-                                                    <span className="price-from">From</span>
-                                                    <span className="price-amount">$199</span>
-                                                    <span className="price-period">/ night</span>
-                                                </div>
-                                                <a href="room-details.html" className="btn-room-details">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>{/* End Room Card */}
-                                <div className="col-xl-4 col-lg-6">
-                                    <div className="room-card">
-                                        <div className="room-image">
-                                            <img src="assets/img/hotel/room-7.webp" alt="Family Garden Room" className="img-fluid" />
-                                            <div className="room-features">
-                                                <span className="feature-badge family">Family Friendly</span>
-                                                <span className="feature-badge garden">Garden View</span>
-                                            </div>
-                                        </div>
-                                        <div className="room-content">
-                                            <div className="room-header">
-                                                <h3>Family Garden Room</h3>
-                                                <div className="room-rating">
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star" />
-                                                </div>
-                                            </div>
-                                            <p className="room-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                            <div className="room-amenities">
-                                                <span><i className="bi bi-people" /> Up to 5 guests</span>
-                                                <span><i className="bi bi-cup-hot" /> Mini Kitchen</span>
-                                                <span><i className="bi bi-controller" /> Game Console</span>
-                                            </div>
-                                            <div className="room-footer">
-                                                <div className="room-price">
-                                                    <span className="price-from">From</span>
-                                                    <span className="price-amount">$159</span>
-                                                    <span className="price-period">/ night</span>
-                                                </div>
-                                                <a href="room-details.html" className="btn-room-details">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>{/* End Room Card */}
-                                <div className="col-xl-4 col-lg-6">
-                                    <div className="room-card">
-                                        <div className="room-image">
-                                            <img src="assets/img/hotel/room-12.webp" alt="Romantic Honeymoon Suite" className="img-fluid" />
-                                            <div className="room-features">
-                                                <span className="feature-badge romantic">Romantic</span>
-                                                <span className="feature-badge premium">Premium</span>
-                                            </div>
-                                        </div>
-                                        <div className="room-content">
-                                            <div className="room-header">
-                                                <h3>Romantic Honeymoon Suite</h3>
-                                                <div className="room-rating">
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                </div>
-                                            </div>
-                                            <p className="room-description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
-                                            <div className="room-amenities">
-                                                <span><i className="bi bi-people" /> Up to 2 guests</span>
-                                                <span><i className="bi bi-heart" /> King Bed</span>
-                                                <span><i className="bi bi-water" /> Jacuzzi</span>
-                                            </div>
-                                            <div className="room-footer">
-                                                <div className="room-price">
-                                                    <span className="price-from">From</span>
-                                                    <span className="price-amount">$349</span>
-                                                    <span className="price-period">/ night</span>
-                                                </div>
-                                                <a href="room-details.html" className="btn-room-details">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>{/* End Room Card */}
-                                <div className="col-xl-4 col-lg-6">
-                                    <div className="room-card">
-                                        <div className="room-image">
-                                            <img src="assets/img/hotel/room-15.webp" alt="Standard City Room" className="img-fluid" />
-                                            <div className="room-features">
-                                                <span className="feature-badge city">City View</span>
-                                            </div>
-                                        </div>
-                                        <div className="room-content">
-                                            <div className="room-header">
-                                                <h3>Standard City Room</h3>
-                                                <div className="room-rating">
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-half" />
-                                                    <i className="bi bi-star" />
-                                                </div>
-                                            </div>
-                                            <p className="room-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                                            <div className="room-amenities">
-                                                <span><i className="bi bi-people" /> Up to 2 guests</span>
-                                                <span><i className="bi bi-wifi" /> Free WiFi</span>
-                                                <span><i className="bi bi-car-front" /> Parking</span>
-                                            </div>
-                                            <div className="room-footer">
-                                                <div className="room-price">
-                                                    <span className="price-from">From</span>
-                                                    <span className="price-amount">$129</span>
-                                                    <span className="price-period">/ night</span>
-                                                </div>
-                                                <a href="room-details.html" className="btn-room-details">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>{/* End Room Card */}
-                                <div className="col-xl-4 col-lg-6">
-                                    <div className="room-card">
-                                        <div className="room-image">
-                                            <img src="assets/img/hotel/room-18.webp" alt="Premium Ocean View" className="img-fluid" />
-                                            <div className="room-features">
-                                                <span className="feature-badge ocean">Ocean View</span>
-                                                <span className="feature-badge luxury">Luxury</span>
-                                            </div>
-                                        </div>
-                                        <div className="room-content">
-                                            <div className="room-header">
-                                                <h3>Premium Ocean View</h3>
-                                                <div className="room-rating">
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                    <i className="bi bi-star-fill" />
-                                                </div>
-                                            </div>
-                                            <p className="room-description">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.</p>
-                                            <div className="room-amenities">
-                                                <span><i className="bi bi-people" /> Up to 3 guests</span>
-                                                <span><i className="bi bi-cup-hot" /> Coffee Machine</span>
-                                                <span><i className="bi bi-safe" /> Safe</span>
-                                            </div>
-                                            <div className="room-footer">
-                                                <div className="room-price">
-                                                    <span className="price-from">From</span>
-                                                    <span className="price-amount">$259</span>
-                                                    <span className="price-period">/ night</span>
-                                                </div>
-                                                <a href="room-details.html" className="btn-room-details">View Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>{/* End Room Card */}
+                                </div>
+                                    )
+                                })
+                               }
+                               
                             </div>
                         </div>
                         <div className="load-more-section" data-aos="fade-up" data-aos-delay={400}>

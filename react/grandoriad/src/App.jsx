@@ -10,6 +10,8 @@ import Location from './website/Pages/Location';
 import Offers from './website/Pages/Offers';
 import Room from './website/Pages/Room';
 import Restaurant from './website/Pages/Restaurant';
+import Dashboard from './admin/Apages/Dashboard';
+import RoomManege from './admin/Apages/RoomManege';
 // import '/b/ootstrap/dist/css/bootstrap.min.css'
 // import './assets/css/main.css'
 
@@ -38,6 +40,11 @@ function App() {
 
 
           <Route path='*' element={<Not />} />
+
+          {/* admin */}
+
+          <Route path='/dash' element={<Dashboard />} />
+          <Route path='/roommage' element={<RoomManege />} />
         </Routes>
       </div>
     </BrowserRouter>
