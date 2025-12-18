@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 function Aheader() {
-  return (
-    <div>
-         <header id="header" className="header sticky-top">
+    return (
+        <div>
+            <header id="header" className="header sticky-top">
                 <div className="topbar d-flex align-items-center dark-background">
                     <div className="container d-flex justify-content-center justify-content-md-between">
                         <div className="contact-info d-flex align-items-center">
@@ -29,21 +29,23 @@ function Aheader() {
                         <nav id="navmenu" className="navmenu">
                             <ul>
                                 <li><NavLink to="/about" className="">About</NavLink></li>
-                                <li><NavLink to="/roommage">Rooms</NavLink></li>
-                                <li><NavLink  to="/ame">Amenities</NavLink></li>
-                                <li><NavLink to="/location">Location</NavLink></li>
-                                <li className="dropdown"><a href="#"><span>Pages</span> <i className="bi bi-chevron-down toggle-dropdown" /></a>
+                                 <li className="dropdown"><a href="#"><span>Room</span> <i className="bi bi-chevron-down toggle-dropdown" /></a>
                                     <ul>
-                                    
-                                        <li><NavLink to="/rest">Restaurant</NavLink></li>
-                                        <li><NavLink to="/offer" >Offers</NavLink></li>
-                                    
-                                        <li><NavLink to="/book">Booking</NavLink></li>
+                                        <li><NavLink to="/roommage">Room Manage</NavLink></li>
+                                        <li><NavLink to="/roomadd" >Room Add</NavLink></li>
                                        
                                     </ul>
                                 </li>
-                             
-                               
+
+                                <li><NavLink to="/ame">Amenities</NavLink></li>
+                                <li><NavLink to="/location">Location</NavLink></li>
+                                <li className="dropdown"><a href="#"><span>Pages</span> <i className="bi bi-chevron-down toggle-dropdown" /></a>
+                                    <ul>
+                                        <li><NavLink to="/rest">Restaurant</NavLink></li>
+                                        <li><NavLink to="/offer" >Offers</NavLink></li>
+                                        <li><NavLink to="/book">Booking</NavLink></li>
+                                    </ul>
+                                </li>
                             </ul>
                             <i className="mobile-nav-toggle d-xl-none bi bi-list" />
                         </nav>
@@ -51,8 +53,8 @@ function Aheader() {
                 </div>
             </header>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Aheader

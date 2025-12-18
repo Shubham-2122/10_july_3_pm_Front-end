@@ -12,6 +12,7 @@ import Room from './website/Pages/Room';
 import Restaurant from './website/Pages/Restaurant';
 import Dashboard from './admin/Apages/Dashboard';
 import RoomManege from './admin/Apages/RoomManege';
+import RoomAdd from './admin/Apages/RoomAdd';
 // import '/b/ootstrap/dist/css/bootstrap.min.css'
 // import './assets/css/main.css'
 
@@ -45,6 +46,7 @@ function App() {
 
           <Route path='/dash' element={<Dashboard />} />
           <Route path='/roommage' element={<RoomManege />} />
+          <Route path='/roomadd' element={<RoomAdd />} />
         </Routes>
       </div>
     </BrowserRouter>
