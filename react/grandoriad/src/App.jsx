@@ -13,6 +13,8 @@ import Restaurant from './website/Pages/Restaurant';
 import Dashboard from './admin/Apages/Dashboard';
 import RoomManege from './admin/Apages/RoomManege';
 import RoomAdd from './admin/Apages/RoomAdd';
+import AminitesMan from './admin/Apages/AminitesMan';
+import AmitiAdd from './admin/Apages/AmitiAdd';
 // import '/b/ootstrap/dist/css/bootstrap.min.css'
 // import './assets/css/main.css'
 
@@ -47,6 +49,9 @@ function App() {
           <Route path='/dash' element={<Dashboard />} />
           <Route path='/roommage' element={<RoomManege />} />
           <Route path='/roomadd' element={<RoomAdd />} />
+
+           <Route path='/amitimange' element={<AminitesMan />} />
+           <Route path='/amitiAdd' element={<AmitiAdd />} />
         </Routes>
       </div>
     </BrowserRouter>

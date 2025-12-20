@@ -36,8 +36,15 @@ function Aheader() {
                                        
                                     </ul>
                                 </li>
+                                 <li className="dropdown"><a href="#"><span>Aminities</span> <i className="bi bi-chevron-down toggle-dropdown" /></a>
+                                    <ul>
+                                        <li><NavLink to="/amitimange">Aminities Manage</NavLink></li>
+                                        <li><NavLink to="/amitiAdd" >Aminities Add</NavLink></li>
+                                       
+                                    </ul>
+                                </li>
 
-                                <li><NavLink to="/ame">Amenities</NavLink></li>
+                               
                                 <li><NavLink to="/location">Location</NavLink></li>
                                 <li className="dropdown"><a href="#"><span>Pages</span> <i className="bi bi-chevron-down toggle-dropdown" /></a>
                                     <ul>
