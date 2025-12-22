@@ -33,10 +33,56 @@ function RoomManege() {
     }
 
     // card delete
-    const deleteCard =  async (id)=>{
+    const deleteCard = async (id) => {
         const res = await axios.delete(`http://localhost:3000/rooms/${id}`)
         console.log(res.data)
         fetchdata()
+    }
+
+    // update process model
+    const [edit, setedit] = useState(null)
+    // data show 
+    const [edited, setedited] = useState({
+        id: "",
+        name: "",
+        guests: "",
+        price: "",
+        type: "",
+        img: ""
+    })
+
+    // data get and open model
+    const getdata = (data) => {
+        console.log(data)
+        setedit(data)
+        setedited(data)
+    }
+
+    const getchange = (e) => {
+        setedited({
+            ...edited,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const SubmitData = async (e) => {
+        e.preventDefault()
+        try {
+            const res = await axios.put(`http://localhost:3000/rooms/${edited.id}`, edited)
+            console.log(res.data)
+            setedited({
+                id :"",
+                name: "",
+                guests: "",
+                price: "",
+                type: "",
+                img: ""
+            })
+            setedit(null)
+            fetchdata()
+        } catch (error) {
+            console.log("Api data not Found", error)
+        }
     }
 
     return (
@@ -70,8 +116,8 @@ function RoomManege() {
                                         <td>{data.type}</td>
                                         <td>
                                             <button data-bs-toggle="modal" data-bs-target="#exampleModal" className='btn btn-info' onClick={() => singlecard(data.id)}>View</button>
-                                            <button className='btn btn-success mx-2'>Edit</button>
-                                            <button className='btn btn-danger' onClick={()=>deleteCard(data.id)}>Delete</button>
+                                            <button className='btn btn-success mx-2' onClick={() => getdata(data)}>Edit</button>
+                                            <button className='btn btn-danger' onClick={() => deleteCard(data.id)}>Delete</button>
                                         </td>
                                     </tr>
                                 )
@@ -134,6 +180,68 @@ function RoomManege() {
                         </div>
                     </div>
                 </div>
+
+                {
+                    edit && (
+                        <div className="container">
+                            <div className="row justify-content-center my-5" data-aos="fade-up" data-aos-delay={200}>
+                                <div className="col-lg-10">
+                                    <div className="contact-form-wrapper">
+                                        <h2 className="text-center mb-4">Room Update data</h2>
+                                        <form method="post" className="php-email-form">
+                                            <div className="row g-3">
+                                                <div className="col-md-6">
+                                                    <div className="form-group">
+                                                        <input type="text" value={edited.name} onChange={getchange} className="form-control" name="name" placeholder="Enter Room Name" required />
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div className="form-group">
+                                                        <input type="text" value={edited.type} onChange={getchange} className="form-control" name="type" placeholder="Enter your type" required />
+                                                    </div>
+                                                </div>
+                                                <div className="col-6">
+                                                    <div className="form-group">
+                                                        <select className="form-select" value={edited.guests} onChange={getchange} id="" name="guests" required>
+                                                            <option value hidden>Choose guests</option>
+                                                            <option value={1}>1 guests</option>
+                                                            <option value={2}>2 guests</option>
+                                                            <option value={3}>3 guests</option>
+                                                            <option value={4}>4 guests</option>
+                                                            <option value={5}>5 guests</option>
+                                                            <option value={6}>6 guests</option>
+                                                            <option value={7}>7 guests</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div className="form-group">
+                                                        <input type="text" className="form-control" onChange={getchange} value={edited.price} name="price" placeholder="Enter your Price" required />
+                                                    </div>
+                                                </div>
+                                                <div className="col-12">
+                                                    <div className="form-group">
+                                                        <input type="url" className="form-control" onChange={getchange} value={edited.img} name="img" placeholder="Enter your img" required />
+                                                    </div>
+                                                </div>
+                                                <div className="col-12 text-center">
+                                                    <div className="row">
+                                                        <div className="col-6">
+                                                            <button type="submit" className="btn btn-primary" onClick={SubmitData}>update Rooms</button>
+                                                        </div>
+                                                        <div className="col-6">
+                                                            <button type="submit" className="btn btn-primary" onClick={() => setedit(null)}>cancle Rooms</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
 
             </div>
         </div>

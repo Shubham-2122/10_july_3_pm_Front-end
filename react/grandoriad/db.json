@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Deluxe Ocean Suite",
-      "guests": "2",
+      "guests": "5",
       "price": "100",
       "type": "Ocean View",
       "img": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?_gl=1*142nwcb*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjU4Nzk4OTAkbzQ0JGcxJHQxNzY1ODc5ODk0JGo1NiRsMCRoMA.."
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "name": "Family Garden Room",
-      "guests": "3",
+      "guests": "7",
       "price": "150",
       "type": "Family Friendly",
       "img": "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?_gl=1*gweiy*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjU4Nzk4OTAkbzQ0JGcxJHQxNzY1ODc5ODk0JGo1NiRsMCRoMA.."
@@ -33,14 +33,14 @@
   ],
   "amenities": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Infinity Pool & Sun Deck",
       "desc": "orem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       "time": "10 Am - to 6pm",
       "img": "https://th.bing.com/th/id/OIP.wLOwUAlejeoN46gE_bEFygHaE8?w=225&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.5&pid=1.7&rm=3"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Signature Restaurant",
       "desc": "orem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
       "time": "10 Am - to 6pm",
