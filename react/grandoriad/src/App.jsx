@@ -15,6 +15,7 @@ import RoomManege from './admin/Apages/RoomManege';
 import RoomAdd from './admin/Apages/RoomAdd';
 import AminitesMan from './admin/Apages/AminitesMan';
 import AmitiAdd from './admin/Apages/AmitiAdd';
+import Alogin from './admin/Apages/Alogin';
 // import '/b/ootstrap/dist/css/bootstrap.min.css'
 // import './assets/css/main.css'
 
@@ -52,6 +53,7 @@ function App() {
 
            <Route path='/amitimange' element={<AminitesMan />} />
            <Route path='/amitiAdd' element={<AmitiAdd />} />
+            <Route path='/alogin' element={<Alogin />} />
         </Routes>
       </div>
     </BrowserRouter>
