@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 function Aheader() {
 
@@ -10,6 +10,14 @@ function Aheader() {
             redirect("/alogin")
         }
     })
+
+    const logout=()=>{
+        localStorage.removeItem("Aid");
+        localStorage.removeItem("Aname");
+        console.log("logout Successfully");
+        redirect("/alogin");
+    }
+
     return (
         <div>
             <header id="header" className="header sticky-top">
@@ -51,16 +59,26 @@ function Aheader() {
                                        
                                     </ul>
                                 </li>
+                                    {(()=>{
+                                        if(localStorage.getItem("Aid")){
+                                            return(
+                                                <li><Link>hello {localStorage.getItem("Aname")}</Link></li>
+                                            )
+                                        }
+                                    })()}  
 
-                               
-                                <li><NavLink to="/location">Location</NavLink></li>
-                                <li className="dropdown"><a href="#"><span>Pages</span> <i className="bi bi-chevron-down toggle-dropdown" /></a>
-                                    <ul>
-                                        <li><NavLink to="/rest">Restaurant</NavLink></li>
-                                        <li><NavLink to="/offer" >Offers</NavLink></li>
-                                        <li><NavLink to="/book">Booking</NavLink></li>
-                                    </ul>
-                                </li>
+                                    {(()=>{
+                                        if(localStorage.getItem("Aid")){
+                                            return(
+                                                <li><Link onClick={logout}>logout</Link></li>
+                                            )
+                                        }
+                                        else{
+                                            return(
+                                                 <li><Link to="/alogin">Alogin</Link></li>
+                                            )
+                                        }
+                                    })()}  
                             </ul>
                             <i className="mobile-nav-toggle d-xl-none bi bi-list" />
                         </nav>

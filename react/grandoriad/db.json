@@ -53,5 +53,19 @@
       "desc": "asfdsa dfasd sad sad sad sad fsagf asdfa werfawfer",
       "time": "18:50"
     }
+  ],
+  "users":[
+     {
+      "id": "1",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "password": "123456"
+    }
   ]
 }

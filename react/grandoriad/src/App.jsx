@@ -18,6 +18,8 @@ import AmitiAdd from './admin/Apages/AmitiAdd';
 import Alogin from './admin/Apages/Alogin';
 // import '/b/ootstrap/dist/css/bootstrap.min.css'
 // import './assets/css/main.css'
+import {  ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -30,7 +32,16 @@ function App() {
 
   return (
     <BrowserRouter>
+        <ToastContainer position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored" />
       <div>
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -51,9 +62,9 @@ function App() {
           <Route path='/roommage' element={<RoomManege />} />
           <Route path='/roomadd' element={<RoomAdd />} />
 
-           <Route path='/amitimange' element={<AminitesMan />} />
-           <Route path='/amitiAdd' element={<AmitiAdd />} />
-            <Route path='/alogin' element={<Alogin />} />
+          <Route path='/amitimange' element={<AminitesMan />} />
+          <Route path='/amitiAdd' element={<AmitiAdd />} />
+          <Route path='/alogin' element={<Alogin />} />
         </Routes>
       </div>
     </BrowserRouter>
