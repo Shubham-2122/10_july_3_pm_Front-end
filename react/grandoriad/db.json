@@ -54,18 +54,27 @@
       "time": "18:50"
     }
   ],
-  "users":[
-     {
+  "users": [
+    {
       "id": "1",
       "name": "user",
       "email": "user@gmail.com",
+      "status": "unblock",
       "password": "1234"
     },
     {
       "id": "2",
       "name": "user1",
       "email": "user1@gmail.com",
+      "status": "block",
       "password": "123456"
+    },
+    {
+      "id": "1766656995638",
+      "name": "shubham",
+      "email": "shubham@gmail.com",
+      "password": "123456",
+      "status": "unblock"
     }
   ]
 }

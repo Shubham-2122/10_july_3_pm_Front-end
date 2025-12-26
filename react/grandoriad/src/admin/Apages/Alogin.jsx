@@ -13,7 +13,7 @@ import {
   from 'mdb-react-ui-kit';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Slide, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 
 function Alogin() {
 
@@ -47,8 +47,8 @@ function Alogin() {
 
       if (email == "" || password == "") {
         console.log("pls require data..")
-        // toast.error("Pls Require Data..")
-        return false;
+         toast.error('Please enter email and password');
+        return;
       }
 
       const res = await axios.get(`http://localhost:3000/admin?email=${email}`)
@@ -56,7 +56,7 @@ function Alogin() {
 
       if (res.data.length === 0) {
         console.log("Email does not match..!")
-        // toast.error("Email does not match..")
+        toast.error('Email does not match..!')
         return false;
       }
 
@@ -65,12 +65,14 @@ function Alogin() {
 
       if (admin.password != password) {
         console.log("Password does not match..!")
+        toast.error('Password does not match..!')
         return false
       }
 
       localStorage.setItem("Aid", admin.id)
       localStorage.setItem("Aname", admin.name)
       console.log("succefully login..")
+      toast.success('Successfully login.')
       redirect("/dash")
 
     } catch (error) {
@@ -85,7 +87,7 @@ function Alogin() {
         <MDBRow className='d-flex justify-content-center align-items-center h-100'>
           <MDBCol col='12'>
 
-            <form action="">
+            <form action="" onSubmit={subniteddata}>
               <MDBCard className='bg-white my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '500px' }}>
                 <MDBCardBody className='p-5 w-100 d-flex flex-column'>
 
@@ -97,7 +99,7 @@ function Alogin() {
 
                   <MDBCheckbox name='flexCheck' id='flexCheckDefault' className='mb-4' label='Remember password' />
 
-                  <MDBBtn onClick={subniteddata} size='lg' type='submit'>
+                  <MDBBtn  size='lg' type='submit'>
                     Login
                   </MDBBtn>
 

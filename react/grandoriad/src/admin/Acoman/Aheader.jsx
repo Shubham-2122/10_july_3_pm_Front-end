@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function Aheader() {
 
@@ -15,6 +16,7 @@ function Aheader() {
         localStorage.removeItem("Aid");
         localStorage.removeItem("Aname");
         console.log("logout Successfully");
+        toast.success('logout Succesfully')
         redirect("/alogin");
     }
 

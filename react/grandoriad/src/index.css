@@ -1,0 +1,8 @@
+.toast-container-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 9999; /* make sure it’s on top of navbar */
+}
