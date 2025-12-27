@@ -26,6 +26,7 @@ import { Bounce, Slide, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Login from './website/Pages/Login'
 import Register from './website/Pages/Register'
+import EditProfile from './website/Pages/EditProfile'
 
 // Optional: AOS CSS (if using)
 // import 'aos/dist/aos.css'
@@ -69,6 +70,7 @@ function App() {
         <Route path='/rest' element={<Restaurant />} />
          <Route path='/login' element={<Login />} />
           <Route path='/newdata' element={<Register />} />
+          <Route path='/edit' element={<EditProfile />} />
 
         {/* Admin pages */}
         <Route path='/dash' element={<Dashboard />} />

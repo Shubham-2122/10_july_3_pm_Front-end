@@ -1,7 +1,26 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function Header() {
+
+    const redirect = useNavigate()
+
+    useEffect(()=>{
+        if(!localStorage.getItem("Uid"))
+        {
+            redirect("/login")
+        }
+    })
+
+    const logout=()=>{
+        localStorage.removeItem("Uid")
+        localStorage.removeItem("Uname")
+        redirect("/login")
+        toast.success('logout successfully..');
+
+    }
+
     return (
         <div>
             <header id="header" className="header sticky-top">
@@ -47,7 +66,19 @@ function Header() {
                                 {(()=>{
                                     if(localStorage.getItem("Uid")){
                                         return(
-                                            <li><Link >{localStorage.getItem("Uname")}</Link> </li>
+                                            <li><Link to="/edit">{localStorage.getItem("Uname")}</Link> </li>
+                                        )
+                                    }
+                                })()}
+                                {(()=>{
+                                    if(localStorage.getItem("Uid")){
+                                        return(
+                                             <li><Link onClick={logout}>Logout</Link> </li>
+                                        )
+                                    }
+                                    else{
+                                        return(
+                                            <li><Link >login</Link> </li>
                                         )
                                     }
                                 })()}
