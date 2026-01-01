@@ -27,6 +27,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import Login from './website/Pages/Login'
 import Register from './website/Pages/Register'
 import EditProfile from './website/Pages/EditProfile'
+import UserGet from './admin/Apages/UserGet'
+import Uabout from './admin/Apages/Uabout'
 
 // Optional: AOS CSS (if using)
 // import 'aos/dist/aos.css'
@@ -79,6 +81,8 @@ function App() {
         <Route path='/amitimange' element={<AminitesMan />} />
         <Route path='/amitiAdd' element={<AmitiAdd />} />
         <Route path='/alogin' element={<Alogin />} />
+        <Route path='/auserapi' element={<UserGet />} />
+        <Route path='/uabout' element={<Uabout />} />
 
         {/* Catch-all */}
         <Route path='*' element={<Not />} />

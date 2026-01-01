@@ -57,7 +57,7 @@
   "users": [
     {
       "id": "1",
-      "name": "user",
+      "name": "parth",
       "email": "user@gmail.com",
       "status": "unblock",
       "password": "1234"
@@ -75,6 +75,12 @@
       "email": "shubham@gmail.com",
       "password": "123456",
       "status": "unblock"
+    },
+    {
+      "id": "1767004272745",
+      "name": "vivek",
+      "email": "vivek@gmail.com",
+      "password": "1234"
     }
   ]
 }

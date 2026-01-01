@@ -61,6 +61,8 @@ function Aheader() {
                                        
                                     </ul>
                                 </li>
+                                        <li><NavLink to="/auserapi" >user</NavLink></li>
+                                        <li><NavLink to="/uabout" >user About</NavLink></li>
                                     {(()=>{
                                         if(localStorage.getItem("Aid")){
                                             return(
