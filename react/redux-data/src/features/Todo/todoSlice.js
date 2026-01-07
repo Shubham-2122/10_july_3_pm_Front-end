@@ -10,10 +10,13 @@ export const todoSlice = createSlice({
     reducers:{
         AddData : (state,action)=>{
             state.todo.push(action.payload)
+        },
+        deleteTodo : (state,action)=>{
+            state.todo = state.todo.filter((data,index)=> index !== action.payload)
         }
     }
 })
 
-export const {AddData} = todoSlice.actions
+export const {AddData,deleteTodo} = todoSlice.actions
 
 export default todoSlice.reducer;

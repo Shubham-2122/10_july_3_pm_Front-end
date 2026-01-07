@@ -10,8 +10,8 @@ function AddTodo() {
 
     const getdata=(e)=>{
         e.preventDefault() 
-
         dispatch(AddData(name))
+        setname("")
     }
 
   return (
