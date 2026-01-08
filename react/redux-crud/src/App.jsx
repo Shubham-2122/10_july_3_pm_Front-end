@@ -1,10 +1,20 @@
 import React from 'react'
+import Home from './Compoenet/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Header from './Compoenet/Header'
+import NewData from './Compoenet/NewData'
 
 function App() {
   return (
+    <BrowserRouter>
     <div>
-      <h1>hello Redux crud</h1>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/newdata' element={<NewData />} />
+      </Routes>
     </div>
+    </BrowserRouter>
   )
 }
 
