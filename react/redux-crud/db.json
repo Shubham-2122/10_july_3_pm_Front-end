@@ -8,15 +8,9 @@
     },
     {
       "id": "2",
-      "name": "User2",
+      "name": "sujal",
       "email": "User2@gmail.com",
       "password": "123456"
-    },
-    {
-      "id": "3",
-      "name": "User3",
-      "email": "User3@gmail.com",
-      "password": "1234567"
     },
     {
       "id": "1767867040183",
@@ -25,21 +19,21 @@
       "password": "123456"
     }
   ],
-  "products":[
+  "products": [
     {
-      "id":1,
-      "name":"iphone",
-      "price":"50000"
+      "id": "1",
+      "name": "iphone",
+      "price": "50000"
     },
     {
-      "id":2,
-      "name":"vivo",
-      "price":"30000"
+      "id": "2",
+      "name": "vivo",
+      "price": "30000"
     },
-     {
-      "id":3,
-      "name":"oppo",
-      "price":"20000"
+    {
+      "id": "3",
+      "name": "oppo",
+      "price": "20000"
     }
   ]
 }
